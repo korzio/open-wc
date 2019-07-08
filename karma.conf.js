@@ -14,6 +14,10 @@ module.exports = config => {
           type: 'module',
         },
       ],
+
+      esm: {
+        nodeResolve: true,
+      },
     }),
   );
   return config;
