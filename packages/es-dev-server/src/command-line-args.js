@@ -89,6 +89,18 @@ export default function readCommandLineArgs(argv = process.argv) {
       description: 'Extra file extentions to use when transforming code.',
     },
     {
+      name: 'babel-exclude',
+      type: String,
+      multiple: true,
+      description: 'Patterns of files to exclude from babel compilation.',
+    },
+    {
+      name: 'babel-modern-exclude',
+      type: String,
+      multiple: true,
+      description: 'Patterns of files to exclude from babel compilation on modern browsers.',
+    },
+    {
       name: 'compatibility',
       type: String,
       description: 'Compatibility mode for older browsers. Can be: "esm", modern" or "all"',
@@ -183,6 +195,8 @@ export default function readCommandLineArgs(argv = process.argv) {
     customMiddlewares: options.customMiddlewares,
     extraFileExtensions: options.fileExtensions,
     moduleDirectories: options.moduleDirs,
+    babelExclude: options.babelExclude,
+    babelModernExclude: options.babelModernExclude,
     logStartup: true,
   };
 }
