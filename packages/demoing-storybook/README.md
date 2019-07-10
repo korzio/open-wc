@@ -31,7 +31,7 @@ npm init @open-wc
 "scripts": {
   "storybook": "start-storybook -p 9001",
   "storybook:build": "build-storybook -o _site -s storybook-static",
-  "site:build": "npm run storybook:build",
+  "site:build": "npm run storybook:build"
 },
 ```
 
